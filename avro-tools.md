@@ -75,3 +75,9 @@ avro-tools count sample.avro
 ```
 avro-tools fromjson sample.json --schema-file sample_schema.json > sample.avro
 ```
+
+## スキーマ情報の取得
+
+```
+avro-tools getschema sample.avro
+```
