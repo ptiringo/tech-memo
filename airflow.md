@@ -1,5 +1,15 @@
 # Airflow
 
+## DAG 作成
+DAG に対してコード修正なしに外部から値を注入する場合、以下の2つの手段を取りうる。
+- Variable
+- Environment Variable
+
+## DAG 実行
+
+### 再実行
+- 個々のタスクの実行履歴を Clear することによってそのタスクおよび後続のタスクを再実行することができる。
+
 ## UI
 
 ### カスタマイズ
@@ -9,7 +19,11 @@
 - \[webserver\] navbar_color でナビゲーションバーの色を変更することが可能。
 
 
-## SQL サンプル
+## airflow_db
+
+- Web UI の Data Profiling > Ad HocQuery から Airflow の Database に対してアドホックなクエリを発行できる。
+
+### SQL サンプル
 
 ### DAG の実行時間出力
 
