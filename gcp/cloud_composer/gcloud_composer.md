@@ -1,5 +1,29 @@
-## コマンドサンプル
+# Cloud Composer
 
+## 環境の操作
+
+### 環境のアップグレード
+
+#### アップグレード可能なバージョンの確認
+
+- 最新のバージョンにのみアップグレードできる。
+
+```
+gcloud beta composer environments list-upgrades ENVIRONMENT_NAME \
+    --location asia-northeast1
+```
+
+#### アップグレードの実行
+
+- 30分程度掛かる。
+
+```
+gcloud beta composer environments update ENVIRONMENT_NAME \
+    --location asia-northeast1 --image-version COMPOSER_VERSION
+```
+
+
+## DAG の操作
 ### DAG の手動実行
 
 ```sh
@@ -46,3 +70,4 @@ gcloud composer environments run \
             --location ${location} \
             ${composer_environment_name} delete_dag -- ${dag_name}
 ```
+
